@@ -7,7 +7,7 @@ Usage
 Run this interpreter from the command like any other interpreter in this
 repository. The basic usage is:
 
-   $ java -jar interpreter.jar file1 file2 ...
+    $ java -jar interpreter.jar file1 file2 ...
 
 where `interpreter.jar` is the compiled runnable JAR for this interpreter,
 and `fileX` are any number of BeanShell scripts.
