@@ -38,7 +38,10 @@ public class BeanShellInterpreter extends CliInterpreter
 			builder.append("import ca.uqac.lif.cep.util.*;\n");
 		}
 		builder.append(FileHelper.readToString(new File(filename)));
-		Reader s_reader = new StringReader(builder.toString());
+		String code = builder.toString();
+		//code = code.replaceAll("connect\\((.*?)\\)", "Connector.connect(new Processor[]{$1})");
+		System.out.println(code);
+		Reader s_reader = new StringReader(code);
 		try
 		{
 			m_interpreter.eval(s_reader);

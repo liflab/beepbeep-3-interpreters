@@ -1,0 +1,5 @@
+avg = RunAvg.duplicate();
+Connector.connect(new Processor[]{avg, new Print()});
+p = avg.getPushableInput();
+p.push(1);
+p.push(2);

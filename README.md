@@ -36,6 +36,9 @@ It will print `foo`.
 Available interpreters
 ----------------------
 
+See the `README` file in each folder for specific information about each
+interpreter.
+
 - [BeanShell](http://beanshell.org)
 
 Projected interpreters

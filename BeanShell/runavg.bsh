@@ -1,0 +1,18 @@
+// Creates a group processor that computes the running average
+
+RunAvg = new GroupProcessor(1,1);
+{
+	fork = new Fork(2);
+	sum = new Cumulate(new CumulativeFunction(Numbers.addition));
+	Connector.connect(fork, 0, sum, 0);
+	ti = new TurnInto(1);
+	Connector.connect(fork, 1, ti, 0);
+	sum_1 = new Cumulate(new CumulativeFunction(Numbers.addition));
+	Connector.connect(new Processor[]{ti, sum_1});
+	div = new ApplyFunction(Numbers.division);
+	Connector.connect(sum, 0, div, 0);
+	Connector.connect(sum_1, 0, div, 1);
+	RunAvg.addProcessors(new Processor[]{fork, div, sum, ti, sum_1});
+	RunAvg.associateInput(0, fork, 0);
+	RunAvg.associateOutput(0, div, 0);
+}

@@ -1,0 +1,7 @@
+reader = new ReadStringStream(System.in).setIsFile(false);
+pump = new Pump(100);
+Thread pump_thread = new Thread(pump);
+feeder = new FindPattern("(.*?),");
+print = new Print().setSeparator("\n");
+connect(reader, pump, feeder, print);
+pump_thread.start();
