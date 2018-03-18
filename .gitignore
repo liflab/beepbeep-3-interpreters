@@ -1,0 +1,15 @@
+*.jar
+lib/
+*.tmp
+*.swp
+*~
+*/bin
+*/dep
+*/doc
+*/tests
+*/.classpath
+*/.settings
+*/.project
+/doc/
+.sonar/
+.metadata

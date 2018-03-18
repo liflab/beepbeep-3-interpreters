@@ -1,0 +1,3 @@
+print = new Print();
+p = print.getPushableInput();
+p.push("foo");
