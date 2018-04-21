@@ -39,21 +39,21 @@
     <depdir>dep</depdir>
   </test>
   <jar>
-    <filename>../beepbeep-bsh.jar</filename>
+    <filename>../root.jar</filename>
   </jar>
   
   <!-- The project's main class -->
-  <mainclass>ca.uqac.lif.cep.interpreters.beanshell.BeanShellInterpreter</mainclass>
+  <mainclass>ca.uqac.lif.cep.interpreters.CliInterpreter</mainclass>
   
   <!--
     Write JAR dependencies here.
   -->
   <dependencies>
     <dependency>
-      <name>BeanShell</name>
-      <classname>bsh.Interpreter</classname>
+      <name>BeepBeep 3</name>
+      <classname>ca.uqac.lif.cep.Processor</classname>
       <files>
-        <jar>http://www.beanshell.org/bsh-2.0b4.jar</jar>
+        <zip>https://github.com/liflab/beepbeep-3/releases/download/v0.7-alpha/beepbeep-3-0.7-alpha.zip</zip>
       </files>
     </dependency>
   </dependencies>

@@ -12,6 +12,17 @@ repository. The basic usage is:
 where `interpreter.jar` is the compiled runnable JAR for this interpreter,
 and `fileX` are any number of BeanShell scripts.
 
+Build instructions
+------------------
+
+1. First build the project in the `Root` folder by going into that folder
+and typing `ant`.
+2. Copy the resulting `root.jar` in `BeanShell/dep`.
+3. Type `ant download-deps` to download the BeanShell library. (This only
+needs to be done once.)
+4. Type `ant` to build the interpreter. This will create the runnable JAR
+file `beepbeep-bsh.jar`.
+
 Automatic imports
 -----------------
 
